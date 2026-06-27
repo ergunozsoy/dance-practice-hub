@@ -11,122 +11,127 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f7f4ef;
-      color: #222;
+      color: #202020;
       line-height: 1.6;
     }
 
     header {
       background: #202020;
       color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 48px 20px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
     }
 
     header p {
+      margin-top: 10px;
       color: #ddd;
     }
 
-    nav {
-      background: white;
-      padding: 14px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      border-bottom: 1px solid #ddd;
-      z-index: 10;
-    }
-
-    nav a {
-      margin: 6px 10px;
-      color: #202020;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-    }
-
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 25px;
+      padding: 35px 20px;
     }
 
     .intro {
-      background: white;
-      padding: 25px;
-      border-radius: 16px;
-      margin-bottom: 25px;
+      text-align: center;
+      margin-bottom: 35px;
     }
 
-    .dance {
-      background: white;
-      padding: 22px;
-      border-radius: 16px;
-      margin-bottom: 20px;
-      border-left: 6px solid #c49a45;
+    .intro h2 {
+      margin-bottom: 8px;
     }
 
-    .dance h2 {
-      margin-top: 0;
+    .intro p {
+      color: #666;
+      margin: 0;
     }
 
-    .tags span {
-      display: inline-block;
-      background: #eee3ce;
-      padding: 5px 10px;
-      border-radius: 20px;
-      margin: 3px;
-      font-size: 0.9rem;
+    .category {
+      margin-bottom: 42px;
     }
 
-    .grid {
+    .category h2 {
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: #8a6a2f;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+
+    .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
     }
 
-    .box {
-      background: #f4f4f4;
-      padding: 15px;
-      border-radius: 12px;
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 22px;
+      border: 1px solid #e3ded6;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .box h3 {
-      margin-top: 0;
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.09);
     }
 
-    .steps {
-      font-family: monospace;
-      white-space: pre-line;
-      background: #272727;
-      color: #fff;
+    .card h3 {
+      margin: 0 0 6px 0;
+      font-size: 1.4rem;
+    }
+
+    .meta {
+      color: #777;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .info {
+      color: #333;
+      min-height: 52px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 12px;
       background: #202020;
       color: white;
-      padding: 10px 14px;
-      border-radius: 8px;
+      padding: 10px 15px;
+      border-radius: 10px;
       text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
     }
 
     .button:hover {
       opacity: 0.85;
     }
 
+    .note {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 20px;
+      border-left: 5px solid #c49a45;
+    }
+
     footer {
       text-align: center;
-      padding: 35px 20px;
+      padding: 34px 20px;
       color: #777;
       background: #f1eee8;
       margin-top: 30px;
+      font-size: 0.95rem;
     }
 
     footer h3 {
@@ -143,6 +148,16 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 25px 15px;
+      }
+    }
   </style>
 </head>
 
@@ -150,197 +165,139 @@
 
 <header>
   <h1>Dance Practice Hub</h1>
-  <p>Einfaches Archiv für Tanzvideos, Grundschritte und Übungsnotizen</p>
+  <p>Learn • Practice • Enjoy</p>
 </header>
 
-<nav>
-  <a href="#bachata">Bachata</a>
-  <a href="#samba">Samba</a>
-  <a href="#tango">Tango</a>
-  <a href="#rumba">Rumba</a>
-  <a href="#walzer">Walzer</a>
-  <a href="#discofox">Disco-Fox</a>
-</nav>
-
-<div class="container">
+<main class="container">
 
   <section class="intro">
-    <h2>Über diese Seite</h2>
-    <p>
-      Diese Seite ist ein privates Übungsarchiv für unsere Tanzgruppe.
-      Hier sammeln wir Grundschritte, kurze Erklärungen und Links zu den Videos.
-    </p>
-    <p>
-      Die Seite bleibt bewusst einfach: schnell öffnen, Tanz auswählen, Video oder Notiz ansehen.
-    </p>
+    <h2>Welchen Tanz möchtest du heute üben?</h2>
+    <p>Ein einfaches Archiv für Tanzvideos, Grundschritte und Übungsnotizen.</p>
   </section>
 
-  <section id="bachata" class="dance">
-    <h2>Bachata</h2>
-    <div class="tags">
-      <span>Latin</span><span>4/4</span><span>1-2-3-Tap</span>
-    </div>
+  <section class="category">
+    <h2>STANDARD</h2>
 
-    <div class="grid">
-      <div class="box">
-        <h3>Grundidee</h3>
-        <p>Weicher Paartanz mit seitlichem Grundschritt und Tap.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Langsamer Walzer</h3>
+        <div class="meta">Standard · 3/4-Takt</div>
+        <p class="info">Ruhig, elegant und fließend.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
-      <div class="box">
-        <h3>Zählweise</h3>
-        <p>1 – 2 – 3 – Tap / 5 – 6 – 7 – Tap</p>
-      </div>
-      <div class="box steps">links
-schließen
-links
-Tap
 
-rechts
-schließen
-rechts
-Tap</div>
-      <div class="box">
-        <h3>Videos</h3>
-        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+      <div class="card">
+        <h3>Wiener Walzer</h3>
+        <div class="meta">Standard · 3/4-Takt</div>
+        <p class="info">Schnell, drehend und klassisch.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
-    </div>
-  </section>
 
-  <section id="samba" class="dance">
-    <h2>Samba</h2>
-    <div class="tags">
-      <span>Latein</span><span>2/4</span><span>Bounce</span>
-    </div>
+      <div class="card">
+        <h3>Tango</h3>
+        <div class="meta">Standard · 4/4-Takt</div>
+        <p class="info">Klar, präzise und markant.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
+      </div>
 
-    <div class="grid">
-      <div class="box">
-        <h3>Grundidee</h3>
-        <p>Rhythmischer Tanz mit federnder Bewegung.</p>
+      <div class="card">
+        <h3>Quickstep</h3>
+        <div class="meta">Standard · schnell</div>
+        <p class="info">Leicht, schwungvoll und elegant.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
-      <div class="box">
-        <h3>Zählweise</h3>
-        <p>1 a 2 / 3 a 4</p>
-      </div>
-      <div class="box steps">Bounce
-Gewicht wechseln
-Rhythmus halten</div>
-      <div class="box">
-        <h3>Videos</h3>
-        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+
+      <div class="card">
+        <h3>Slowfox</h3>
+        <div class="meta">Standard · fließend</div>
+        <p class="info">Elegant, ruhig und kontrolliert.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
     </div>
   </section>
 
-  <section id="tango" class="dance">
-    <h2>Tango</h2>
-    <div class="tags">
-      <span>Standard</span><span>4/4</span><span>präzise</span>
-    </div>
+  <section class="category">
+    <h2>LATIN</h2>
 
-    <div class="grid">
-      <div class="box">
-        <h3>Grundidee</h3>
-        <p>Klarer, markanter Tanz mit präzisen Bewegungen.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Samba</h3>
+        <div class="meta">Latein · 2/4-Takt</div>
+        <p class="info">Rhythmisch, federnd und lebendig.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
-      <div class="box">
-        <h3>Zählweise</h3>
-        <p>Slow – Slow – Quick – Quick – Slow</p>
-      </div>
-      <div class="box steps">S gehen
-S gehen
-Q seit
-Q schließen
-S halten</div>
-      <div class="box">
-        <h3>Videos</h3>
-        <a class="button" href="#" target="_blank">pCloud öffnen</a>
-      </div>
-    </div>
-  </section>
 
-  <section id="rumba" class="dance">
-    <h2>Rumba</h2>
-    <div class="tags">
-      <span>Latein</span><span>4/4</span><span>ruhig</span>
-    </div>
+      <div class="card">
+        <h3>Cha-Cha-Cha</h3>
+        <div class="meta">Latein · 4/4-Takt</div>
+        <p class="info">Verspielt, klar und rhythmisch.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
+      </div>
 
-    <div class="grid">
-      <div class="box">
-        <h3>Grundidee</h3>
-        <p>Langsamer, kontrollierter Tanz mit Gewichtswechseln.</p>
+      <div class="card">
+        <h3>Rumba</h3>
+        <div class="meta">Latein · 4/4-Takt</div>
+        <p class="info">Ruhig, kontrolliert und ausdrucksvoll.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
-      <div class="box">
-        <h3>Zählweise</h3>
-        <p>2 – 3 – 4 – 1</p>
+
+      <div class="card">
+        <h3>Jive</h3>
+        <div class="meta">Latein · schnell</div>
+        <p class="info">Energiegeladen, federnd und fröhlich.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
-      <div class="box steps">2 Schritt
-3 Gewicht
-4 seit
-1 halten</div>
-      <div class="box">
-        <h3>Videos</h3>
-        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+
+      <div class="card">
+        <h3>Paso Doble</h3>
+        <div class="meta">Latein · dramatisch</div>
+        <p class="info">Stark, stolz und präzise.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
     </div>
   </section>
 
-  <section id="walzer" class="dance">
-    <h2>Langsamer Walzer</h2>
-    <div class="tags">
-      <span>Standard</span><span>3/4</span><span>weich</span>
-    </div>
+  <section class="category">
+    <h2>SOCIAL</h2>
 
-    <div class="grid">
-      <div class="box">
-        <h3>Grundidee</h3>
-        <p>Ruhiger, eleganter Tanz mit fließender Bewegung.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Bachata</h3>
+        <div class="meta">Social · 4/4-Takt</div>
+        <p class="info">Weich, musikalisch und gut für Paartanz.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
-      <div class="box">
-        <h3>Zählweise</h3>
-        <p>1 – 2 – 3</p>
-      </div>
-      <div class="box steps">Herr:
-1 vor
-2 seit
-3 schließen
 
-Dame:
-1 zurück
-2 seit
-3 schließen</div>
-      <div class="box">
-        <h3>Videos</h3>
-        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+      <div class="card">
+        <h3>Salsa</h3>
+        <div class="meta">Social · 4/4-Takt</div>
+        <p class="info">Lebendig, kommunikativ und rhythmisch.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
-    </div>
-  </section>
 
-  <section id="discofox" class="dance">
-    <h2>Disco-Fox</h2>
-    <div class="tags">
-      <span>Partytanz</span><span>4/4</span><span>praktisch</span>
-    </div>
+      <div class="card">
+        <h3>Disco-Fox</h3>
+        <div class="meta">Social · Partytanz</div>
+        <p class="info">Praktisch, beliebt und vielseitig.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
+      </div>
 
-    <div class="grid">
-      <div class="box">
-        <h3>Grundidee</h3>
-        <p>Sehr beliebter Tanz für Partys, Tanzabende und Hochzeiten.</p>
-      </div>
-      <div class="box">
-        <h3>Zählweise</h3>
-        <p>1 – 2 – Tap oder 1 – 2 – 3</p>
-      </div>
-      <div class="box steps">links
-rechts
-Tap / schließen</div>
-      <div class="box">
-        <h3>Videos</h3>
-        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+      <div class="card">
+        <h3>Boogie</h3>
+        <div class="meta">Social · Swing</div>
+        <p class="info">Dynamisch, schnell und spielerisch.</p>
+        <a class="button" href="#" target="_blank">Videos öffnen →</a>
       </div>
     </div>
   </section>
 
-</div>
+  <section class="note">
+    <strong>Hinweis:</strong>
+    Diese Website befindet sich in der Entwicklung und wird Schritt für Schritt erweitert.
+    Die Videos bleiben privat und sollten nur mit Zustimmung der beteiligten Personen geteilt werden.
+  </section>
+
+</main>
 
 <footer>
   <h3>Dance Practice Hub</h3>
@@ -348,33 +305,20 @@ Tap / schließen</div>
   <p><strong>Learn • Practice • Enjoy</strong></p>
 
   <p>
-    Version 0.1<br>
+    Version 0.2.0<br>
     Stand: Juni 2026
   </p>
 
   <p>
-    Diese Website befindet sich in der Entwicklung<br>
-    und wird kontinuierlich erweitert.
-  </p>
-
-  <p>
-    Feedback und Verbesserungsvorschläge sind jederzeit willkommen.
-  </p>
-
-  <p>
+    Feedback und Verbesserungsvorschläge sind jederzeit willkommen.<br>
     ✉ <a href="mailto:e.ozsoy@gmail.com">e.ozsoy@gmail.com</a>
   </p>
 
   <p><em>Mit Leidenschaft für das Tanzen entwickelt.</em></p>
+  <p><em>Simple by design. Powerful by evolution.</em></p>
 
   <p>
-    <em>Simple by design. Powerful by evolution.</em>
-  </p>
-
-  <p>
-    © 2026 Ergün Özsoy<br>
-    Alle Rechte vorbehalten.<br>
-    All rights reserved.
+    © 2026 Ergün Özsoy · Alle Rechte vorbehalten · All rights reserved.
   </p>
 </footer>
 
