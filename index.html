@@ -1,1 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dance Practice Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f4ef;
+      color: #222;
+    }
 
+    header {
+      background: #202020;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      color: #ddd;
+    }
+
+    nav {
+      background: white;
+      padding: 14px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin: 6px 10px;
+      color: #202020;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 25px;
+    }
+
+    .intro {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .dance {
+      background: white;
+      padding: 22px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      border-left: 6px solid #c49a45;
+    }
+
+    .dance h2 {
+      margin-top: 0;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #eee3ce;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin: 3px;
+      font-size: 0.9rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 15px;
+    }
+
+    .box {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .box h3 {
+      margin-top: 0;
+    }
+
+    .steps {
+      font-family: monospace;
+      white-space: pre-line;
+      background: #272727;
+      color: #fff;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 8px;
+      background: #202020;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Dance Practice Hub</h1>
+  <p>Einfaches Archiv für Tanzvideos, Grundschritte und Übungsnotizen</p>
+</header>
+
+<nav>
+  <a href="#bachata">Bachata</a>
+  <a href="#samba">Samba</a>
+  <a href="#tango">Tango</a>
+  <a href="#rumba">Rumba</a>
+  <a href="#walzer">Walzer</a>
+  <a href="#discofox">Disco-Fox</a>
+</nav>
+
+<div class="container">
+
+  <section class="intro">
+    <h2>Über diese Seite</h2>
+    <p>
+      Diese Seite ist ein privates Übungsarchiv für unsere Tanzgruppe.
+      Hier sammeln wir Grundschritte, kurze Erklärungen und Links zu den Videos.
+    </p>
+    <p>
+      Die Seite bleibt bewusst einfach: schnell öffnen, Tanz auswählen, Video oder Notiz ansehen.
+    </p>
+  </section>
+
+  <section id="bachata" class="dance">
+    <h2>Bachata</h2>
+    <div class="tags">
+      <span>Latin</span><span>4/4</span><span>1-2-3-Tap</span>
+    </div>
+
+    <div class="grid">
+      <div class="box">
+        <h3>Grundidee</h3>
+        <p>Weicher Paartanz mit seitlichem Grundschritt und Tap.</p>
+      </div>
+      <div class="box">
+        <h3>Zählweise</h3>
+        <p>1 – 2 – 3 – Tap / 5 – 6 – 7 – Tap</p>
+      </div>
+      <div class="box steps">links
+schließen
+links
+Tap
+
+rechts
+schließen
+rechts
+Tap</div>
+      <div class="box">
+        <h3>Videos</h3>
+        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="samba" class="dance">
+    <h2>Samba</h2>
+    <div class="tags">
+      <span>Latein</span><span>2/4</span><span>Bounce</span>
+    </div>
+
+    <div class="grid">
+      <div class="box">
+        <h3>Grundidee</h3>
+        <p>Rhythmischer Tanz mit federnder Bewegung.</p>
+      </div>
+      <div class="box">
+        <h3>Zählweise</h3>
+        <p>1 a 2 / 3 a 4</p>
+      </div>
+      <div class="box steps">Bounce
+Gewicht wechseln
+Rhythmus halten</div>
+      <div class="box">
+        <h3>Videos</h3>
+        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="tango" class="dance">
+    <h2>Tango</h2>
+    <div class="tags">
+      <span>Standard</span><span>4/4</span><span>präzise</span>
+    </div>
+
+    <div class="grid">
+      <div class="box">
+        <h3>Grundidee</h3>
+        <p>Klarer, markanter Tanz mit präzisen Bewegungen.</p>
+      </div>
+      <div class="box">
+        <h3>Zählweise</h3>
+        <p>Slow – Slow – Quick – Quick – Slow</p>
+      </div>
+      <div class="box steps">S gehen
+S gehen
+Q seit
+Q schließen
+S halten</div>
+      <div class="box">
+        <h3>Videos</h3>
+        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="rumba" class="dance">
+    <h2>Rumba</h2>
+    <div class="tags">
+      <span>Latein</span><span>4/4</span><span>ruhig</span>
+    </div>
+
+    <div class="grid">
+      <div class="box">
+        <h3>Grundidee</h3>
+        <p>Langsamer, kontrollierter Tanz mit Gewichtswechseln.</p>
+      </div>
+      <div class="box">
+        <h3>Zählweise</h3>
+        <p>2 – 3 – 4 – 1</p>
+      </div>
+      <div class="box steps">2 Schritt
+3 Gewicht
+4 seit
+1 halten</div>
+      <div class="box">
+        <h3>Videos</h3>
+        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="walzer" class="dance">
+    <h2>Langsamer Walzer</h2>
+    <div class="tags">
+      <span>Standard</span><span>3/4</span><span>weich</span>
+    </div>
+
+    <div class="grid">
+      <div class="box">
+        <h3>Grundidee</h3>
+        <p>Ruhiger, eleganter Tanz mit fließender Bewegung.</p>
+      </div>
+      <div class="box">
+        <h3>Zählweise</h3>
+        <p>1 – 2 – 3</p>
+      </div>
+      <div class="box steps">Herr:
+1 vor
+2 seit
+3 schließen
+
+Dame:
+1 zurück
+2 seit
+3 schließen</div>
+      <div class="box">
+        <h3>Videos</h3>
+        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="discofox" class="dance">
+    <h2>Disco-Fox</h2>
+    <div class="tags">
+      <span>Partytanz</span><span>4/4</span><span>praktisch</span>
+    </div>
+
+    <div class="grid">
+      <div class="box">
+        <h3>Grundidee</h3>
+        <p>Sehr beliebter Tanz für Partys, Tanzabende und Hochzeiten.</p>
+      </div>
+      <div class="box">
+        <h3>Zählweise</h3>
+        <p>1 – 2 – Tap oder 1 – 2 – 3</p>
+      </div>
+      <div class="box steps">links
+rechts
+Tap / schließen</div>
+      <div class="box">
+        <h3>Videos</h3>
+        <a class="button" href="#" target="_blank">pCloud öffnen</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  Private Tanzgruppe · Videos nur mit Zustimmung teilen
+</footer>
+
+</body>
+</html>
