@@ -1,48 +1,32 @@
 # Roadmap
 
-## ✅ Version 0.1.0
-First Steps
+## ✅ Version 0.1.0 — First Steps
 
 - Homepage
 - Dance overview
-- Navigation
 - Footer
 - Feedback
 
----
+## ✅ Version 0.2.0 — Dance Cards
 
-## 🔜 Version 0.2.0
-Dance Cards
+- Card-based layout
+- Dance categories
 
-- Modern homepage
-- Dance cards
-- Better navigation
+## ✅ Version 0.2.1 — Rhythm Cards
 
----
+- Rhythm and counting information
+- Smaller video buttons
 
-## 🔜 Version 0.3.0
-Individual Dance Pages
+## ✅ Version 0.2.2 — Das verstehe ich nicht!
+
+- Dance Guide
+- Common questions section
+
+## 🔜 Version 0.3.0 — pCloud Links
+
+- Real video links
+- Link validation
+
+## 🔜 Version 0.4.0 — Individual Dance Pages
 
 - One page per dance
-
----
-
-## 🔜 Version 0.4.0
-Video Library
-
-- pCloud integration
-- Weekly lessons
-
----
-
-## 🔜 Version 0.5.0
-Practice Journal
-
-- Notes
-- Figure library
-
----
-
-## 🚀 Version 1.0.0
-
-Dance Practice Hub
